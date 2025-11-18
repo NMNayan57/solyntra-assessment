@@ -126,7 +126,7 @@ The system follows a simple RAG pipeline:
 
 ---
 
-✔ Design Decisions & Trade-offs (200–300 words)
+✔ Design Decisions & Trade-offs 
 
 
 ##  Design Decisions & Trade-offs
@@ -172,7 +172,7 @@ GPT-3.5-turbo balances speed (1-2 second responses), cost ($0.002 per query), an
 1. **Hybrid Search**: Combine FAISS semantic search with BM25 keyword search for better precision on exact matches
 2. **Reranking**: Add cross-encoder model to reorder top-5 results for improved relevance
 3. **Disk Persistence**: Save/load FAISS index to avoid re-indexing on restart
-4. **DOCX Support**: Add python-docx for Word document processing
+4. **DOCX and text , MD Support**: Add python-docx ,txt, md for processing
 
 ### Medium-term (1 week)
 5. **Evaluation Metrics**: Implement RAGAS for retrieval precision/recall measurement
@@ -185,6 +185,7 @@ GPT-3.5-turbo balances speed (1-2 second responses), cost ($0.002 per query), an
 10. **Monitoring Dashboard**: Add Prometheus + Grafana for system observability
 11. **Multi-tenant Support**: Add user authentication and per-user document isolation
 12. **CI/CD Pipeline**: Automated testing and deployment with GitHub Actions
+13. **query Latency**: can reduce the latecny upto 100 milisec.
 
 ---
 
@@ -192,7 +193,7 @@ GPT-3.5-turbo balances speed (1-2 second responses), cost ($0.002 per query), an
 
 ##  Demo Video
 
-link : https://drive.google.com/file/d/11gNMPgFk662dqcKt1kurMc-vrVTWGXUO/view?usp=sharing
+link : https://drive.google.com/file/d/1DwGbCL57-8SVvDz7fsFpLZEo4cDxyMmD/view?usp=sharing
 
 ---
 
