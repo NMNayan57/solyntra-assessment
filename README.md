@@ -12,7 +12,7 @@
 A RAG (Retrieval-Augmented Generation) system that allows users to upload documents and ask questions, receiving accurate answers grounded in the uploaded content.
 
 
-## 🚀 Setup and Run Instructions
+##  Setup and Run Instructions
 
 - Python 3.10 or higher
 - OpenAI API key
@@ -66,7 +66,7 @@ A RAG (Retrieval-Augmented Generation) system that allows users to upload docume
 
 ✔ Architecture overview (diagram optional but appreciated)
 
-## 📊 Architecture Overview
+##  Architecture Overview
 
 ![System Architecture](system_architecture.png)
 
@@ -87,7 +87,7 @@ The system follows a simple RAG pipeline:
 
 ---
 
-## 📁 File and Module Responsibilities
+##  File and Module Responsibilities
 
 ### `app/main.py`
 - **Purpose**: FastAPI application entry point
@@ -129,7 +129,7 @@ The system follows a simple RAG pipeline:
 ✔ Design Decisions & Trade-offs (200–300 words)
 
 
-## 💡 Design Decisions & Trade-offs
+##  Design Decisions & Trade-offs
 
 **Vector Database Choice - FAISS:**
 I chose FAISS for its simplicity and speed in this assessment context. It requires zero setup, runs entirely in-memory, and provides sub-10ms similarity search on CPU. The trade-off is scalability—FAISS is ideal for up to 100K documents but would struggle beyond 1M vectors. For production at that scale, I would migrate to Pinecone or Weaviate for managed infrastructure and horizontal scaling.
@@ -145,7 +145,7 @@ GPT-3.5-turbo balances speed (1-2 second responses), cost ($0.002 per query), an
 
 ---
 ✔ Limitations
-## ⚠️ Limitations
+##  Limitations
 
 1. **No Persistence**: FAISS index is stored in memory and lost on restart. Solution: Save index to disk after uploads.
 
@@ -166,7 +166,7 @@ GPT-3.5-turbo balances speed (1-2 second responses), cost ($0.002 per query), an
 ✔ Future improvements
 
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 ### Short-term (1-2 days)
 1. **Hybrid Search**: Combine FAISS semantic search with BM25 keyword search for better precision on exact matches
@@ -190,13 +190,13 @@ GPT-3.5-turbo balances speed (1-2 second responses), cost ($0.002 per query), an
 
 ✔ Demo Video Link
 
-## 📹 Demo Video
+##  Demo Video
 
-[...................]
+link : https://drive.google.com/file/d/11gNMPgFk662dqcKt1kurMc-vrVTWGXUO/view?usp=sharing
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 - **Framework**: FastAPI (async REST API)
 - **Vector DB**: FAISS (in-memory, L2 distance)
@@ -208,7 +208,7 @@ GPT-3.5-turbo balances speed (1-2 second responses), cost ($0.002 per query), an
 
 ---
 
-## 📊 API Endpoints
+##  API Endpoints
 
 ### POST `/upload`
 Upload 1-3 PDF/TXT files for indexing.
@@ -274,7 +274,7 @@ View system performance metrics.
 
 ---
 
-## 📝 Testing
+##  Testing
 
 ```
 # Test upload
