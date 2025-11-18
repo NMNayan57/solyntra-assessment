@@ -5,50 +5,7 @@
 
 
 
-## System Architecture Diagram (for draw.io)
 
-**Image name:** `system_architecture.png`
-
-**What to draw:** A simple flow diagram with these components connected by arrows:
-
-```
-┌─────────────┐
-│    User     │
-└──────┬──────┘
-       │ HTTP Request
-       ▼
-┌─────────────────────────────────┐
-│   FastAPI Backend (main.py)     │
-│  ┌──────────┐   ┌────────────┐  │
-│  │ /upload  │   │   /ask     │  │
-│  └────┬─────┘   └─────┬──────┘  │
-└───────┼───────────────┼─────────┘
-        │               │
-        ▼               ▼
-   ┌─────────┐     ┌──────────┐
-   │utils.py │     │ rag.py   │
-   │Extract  │     │Retrieve  │
-   │ Chunk   │     │Generate  │
-   └────┬────┘     └─────┬────┘
-        │                │
-        └────────┬───────┘
-                 ▼
-        ┌─────────────────┐
-        │ FAISS Vector DB │
-        │  (in-memory)    │
-        └─────────────────┘
-                 │
-                 ▼
-        ┌─────────────────┐
-        │ OpenAI Services │
-        │  • Embeddings   │
-        │  • GPT-3.5      │
-        └─────────────────┘
-```
-
-Keep it simple with boxes and arrows showing data flow.[5][7][1]
-
-***
 ✔ Setup and run instructions
 # Solyntra AI Knowledge Assistant
 
@@ -325,7 +282,7 @@ curl -X POST "http://127.0.0.1:8000/upload" \
   -F "files=@document.pdf"
 
 # Test query
-curl "http://127.0.0.1:8000/ask?query=What%20is%20this%20about?"
+curl "http://127.0.0.1:8000/ask?query=What is the main skills?"
 
 # Check health
 curl "http://127.0.0.1:8000/health"
